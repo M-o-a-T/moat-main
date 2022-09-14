@@ -20,7 +20,7 @@ def cmd(backend="trio"):
 This is the main command handler for MoaT, the Master of all Things.
 """
 
-    obj=attrdict(moat=attrdict(ext="moat"))
+    obj=attrdict(moat=attrdict(ext="moat", name="moat", sub=False))
     main_(obj=obj, _anyio_backend=backend)
 
 
