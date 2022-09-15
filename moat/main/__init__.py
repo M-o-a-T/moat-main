@@ -1,12 +1,11 @@
 # command line interface
 
 import sys
+from functools import partial
 
 import anyio
 import asyncclick as click
-from functools import partial
-
-from moat.util import wrap_main, main_, attrdict
+from moat.util import attrdict, main_, wrap_main
 
 
 def cmd(backend="trio"):
@@ -20,7 +19,7 @@ def cmd(backend="trio"):
 This is the main command handler for MoaT, the Master of all Things.
 """
 
-    obj=attrdict(moat=attrdict(ext="moat", name="moat", sub=False))
+    obj = attrdict(moat=attrdict(ext="moat", name="moat", sub=False))
     main_(obj=obj, _anyio_backend=backend)
 
 
