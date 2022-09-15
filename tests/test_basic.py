@@ -2,6 +2,7 @@
 Empty test file
 """
 
+import moat.main
 
 def test_nothing():
     """
