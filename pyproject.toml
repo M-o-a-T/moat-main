@@ -14,6 +14,7 @@ classifiers = [
 	]
 dependencies = [
 	"anyio ~= 3.0",
+	"moat-util",
 	]
 dynamic = [ "version",]
 keywords = [ "MoaT",]
@@ -24,6 +25,9 @@ readme = "README.rst"
 [[project.authors]]
 email = "matthias@urlichs.de"
 name = "Matthias Urlichs"
+
+[project.scripts]
+moat = "moat.main:cmd"
 
 [project.license]
 file = "LICENSE.txt"
