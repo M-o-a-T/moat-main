@@ -1,2 +1,10 @@
+"""
+Empty test file
+"""
+
+
 def test_nothing():
-    pass
+    """
+    Empty test
+    """
+    pass  # pylint. disable=unnecessary-pass

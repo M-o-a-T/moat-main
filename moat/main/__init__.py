@@ -1,11 +1,9 @@
-# command line interface
+"""
+This module contains the entry point to the MOAT command line interface
+"""
 
-import sys
-from functools import partial
-
-import anyio
 import asyncclick as click
-from moat.util import attrdict, main_, wrap_main
+from moat.util import attrdict, main_
 
 
 def cmd(backend="trio"):
@@ -23,12 +21,13 @@ This is the main command handler for MoaT, the Master of all Things.
     main_(obj=obj, _anyio_backend=backend)
 
 
-@main_.command(
-    short_help="Import the debugger", help="Imports PDB and then continues to process arguments."
-)
+@main_.command(short_help="Import the debugger")
 @click.argument("args", nargs=-1, type=click.UNPROCESSED)
 async def pdb(args):  # safe
-    breakpoint()  # safe
+    """
+    This command imports PDB and continues to process arguments.
+    """
+    breakpoint()  # pylint: disable=forgotten-debug-statement
     if not args:
         return
     return await main_.main(args)
