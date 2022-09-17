@@ -8,4 +8,4 @@ def test_nothing():
     """
     Empty test
     """
-    pass  # pylint. disable=unnecessary-pass
+    pass  # pylint: disable=unnecessary-pass
