@@ -12,7 +12,7 @@ Homepage: https://m-o-a-t.org
 Package: python3-moat-main
 Architecture: all
 Depends: ${misc:Depends}, ${python3:Depends},
-  python3-anyio (~= 3.0),
+  python3-anyio (>= 3.0),
   python3-moat-util,
 Description: The command line for MoaT
   # MoaT main

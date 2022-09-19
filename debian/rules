@@ -7,5 +7,8 @@ export PYBUILD_NAME=moat-main
 	dh $@ --with python3 --buildsystem=pybuild
 
 override_dh_usrlocal:
-	if test -d debian/python3-moat-main/usr/local/bin/ ; then 	mkdir -p debian/python3-moat-main/usr/bin; 	mv debian/python3-moat-main/usr/local/bin/* debian/python3-moat-main/usr/bin; 	fi
+	if test -d debian/python3-moat-main/usr/local/bin/ ; then \
+		mkdir -p debian/python3-moat-main/usr/bin; \
+		mv debian/python3-moat-main/usr/local/bin/* debian/python3-moat-main/usr/bin; \
+	fi
 
