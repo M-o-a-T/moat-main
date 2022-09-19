@@ -1,0 +1,5 @@
+moat-main (0.1.0-1) unstable; urgency=medium
+
+  * Initial Debianization.
+
+ -- Matthias Urlichs <matthias@urlichs.de>  Mon, 19 Sep 2022 17:48:12 +0200
