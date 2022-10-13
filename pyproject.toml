@@ -56,7 +56,7 @@ packages = [ "moat.main",]
 legacy_tox_ini = """
 [tox]
 isolated_build = True
-envlist = py310,py39,check
+envlist = py310,check
 
 [testenv]
 setenv = 
@@ -87,3 +87,5 @@ disable = "wrong-import-order,ungrouped-imports,too-many-nested-blocks,use-dict-
 
 [tool.black]
 line-length = 99
+
+[tool.moat]
