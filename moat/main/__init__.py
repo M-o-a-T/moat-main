@@ -8,7 +8,7 @@ from moat.util import attrdict, main_
 
 def cmd(backend="trio"):
     """
-    The main command entry point, as declared in ``setup.py``.
+    The main command entry point, as declared in ``pyproject.toml``.
     """
 
     # @click.* decorators change the semantics
