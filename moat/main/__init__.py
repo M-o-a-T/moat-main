@@ -20,10 +20,11 @@ This is the main command handler for MoaT, the Master of all Things.
     obj = attrdict(moat=attrdict(sub_pre="moat", sub_post="_main.cli"))
     main_(obj=obj, _anyio_backend=backend)
 
+
 @main_.command(short_help="Import the debugger")
 @click.argument("args", nargs=-1, type=click.UNPROCESSED)
 @click.pass_context
-async def pdb(ctx, args):  # safe
+async def pdb(ctx, args):  # pylint: disable=unused-argument  # safe
     """
     This command imports PDB and continues to process arguments.
     """
