@@ -2,10 +2,10 @@
 This module contains the entry point to the MOAT command line interface
 """
 
-import asyncclick as click
-from moat.util import attrdict, main_
-from asyncscope import main_scope
 import anyio
+import asyncclick as click
+from asyncscope import main_scope
+from moat.util import attrdict, main_
 
 
 def cmd(backend="trio"):
